@@ -14,11 +14,24 @@
     />
     <meta content="Nurullo Salaydinov" name="author" />
     <title>Robocode Kids</title>
+    <style>
+      body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: orange;        /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: blue;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid orange;  /* creates padding around scroll thumb */
+}
+    </style>
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
   </head>
   <body>
     <header>
-      <nav class="bg-white shadow-lg w-full fixed top-0 left-0 md:relative">
+      <nav class="bg-white shadow-lg transition-all duration-700 w-full fixed top-0 left-0 md:relative">
         <div class="container mx-auto px-3 flex items-center justify-between">
           <a href="/" class="navbar-brand">
             <img src="img/robocode-logo-png.png" class="w-40" alt="" />
