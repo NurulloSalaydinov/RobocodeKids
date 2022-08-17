@@ -3,17 +3,24 @@ const toggleDropdown = (drId) => {
   dropdown.classList.toggle("hidden");
 };
 
+window.onscroll = function() {
+	if (window.scrollY > 200) {
+		document.getElementById('toTop').classList.remove('translate-x-full');
+		document.getElementById('toTop').classList.add('right-5');
+	} else {
+		document.getElementById('toTop').classList.add('translate-x-full');
+		document.getElementById('toTop').classList.remove('right-5');
+	}
+	console.log(window.innerHeight)
+}
+
 const NavbarAnimation = () => {
   var nav = document.querySelector("nav");
   var prevScrollpos = window.pageYOffset;
-  window.addEventListener("resize", () => {
-    if (window.matchMedia("(max-width: 768px)").matches) {
       window.addEventListener('scroll', function () {
-		console.log(window.scrollY)
         var currentScrollPos = window.pageYOffset;
-        if (Math.ceil(window.scrollY) > 200) {
+        if (Math.ceil(window.scrollY) > 200 && window.innerWidth > 768) {
           if (prevScrollpos > currentScrollPos) {
-            console.log("scrolltop");
             nav.style = "position: fixed !important;transform: translateY(0)";
           } else {
             nav.style =
@@ -24,10 +31,6 @@ const NavbarAnimation = () => {
           nav.style = "";
         }
       });
-    } else {
-      nav.style = "";
-    }
-  });
 };
 
 NavbarAnimation();
