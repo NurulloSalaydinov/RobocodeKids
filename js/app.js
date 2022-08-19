@@ -11,7 +11,6 @@ window.onscroll = function() {
 		document.getElementById('toTop').classList.add('translate-x-full');
 		document.getElementById('toTop').classList.remove('right-5');
 	}
-	console.log(window.innerHeight)
 }
 
 const NavbarAnimation = () => {
