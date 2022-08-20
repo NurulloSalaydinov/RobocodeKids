@@ -22,68 +22,47 @@
         width: 1rem;
       }
       body::-webkit-scrollbar-track {
-        background: #1750FF;
+        background: #1750ff;
       }
       body::-webkit-scrollbar-thumb {
         border-radius: 20px;
-        background-color: #E5E7EB;
-        border: 5px solid #1750FF;
+        background-color: #e5e7eb;
+        border: 5px solid #1750ff;
       }
     </style>
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
   </head>
   <body>
     <header>
-      <nav class="bg-white shadow-md z-50 transition-all duration-700 w-full fixed top-0 left-0 md:relative">
+      <nav
+        class="bg-white shadow-md z-50 transition-all duration-700 w-full fixed top-0 left-0 md:relative"
+      >
         <div class="container mx-auto px-3 flex items-center justify-between">
           <a href="/" class="navbar-brand">
             <img src="img/robocode-logo-png.png" class="w-40" alt="" />
           </a>
-          <div 
-          class="
-          navbar-links
-          text-lg font-medium flex
-          items-center justify-around
-          w-full
-          py-2
-          bg-white
-          md:py-0
-          shadow-[0_-20px_15px_-20px_rgba(0,0,0,0.5)]
-          fixed bottom-0 left-0
-          md:relative md:w-auto
-          ">
-            <a href="/" 
-            class="
-            text-black transition-all 
-            flex items-center flex-col 
-            md:flex-row gap-2 py-0 px-0 
-            md:py-6
-            md:px-3
-            md:hover:bg-gray-100
-            ">
-              <img src="img/icon/home.svg" class="w-6" alt="">
+          <div
+            class="navbar-links text-lg font-medium flex items-center justify-around w-full py-2 bg-white md:py-0 shadow-[0_-20px_15px_-20px_rgba(0,0,0,0.5)] fixed bottom-0 left-0 md:relative md:w-auto"
+          >
+            <a
+              href="/"
+              class="text-black transition-all flex items-center flex-col md:flex-row gap-2 py-0 px-0 md:py-6 md:px-3 md:hover:bg-gray-100"
+            >
+              <img src="img/icon/home.svg" class="w-6" alt="" />
               Bosh sahifa
             </a>
-            <a href="/" 
-            class="text-black opacity-60 hover:opacity-100
-            transition-all flex items-center gap-2
-            py-0 px-0
-            md:py-6
-            md:px-3
-            md:hover:bg-gray-100
-            flex-col md:flex-row">
-              <img src="img/icon/task.svg" class="w-6" alt="">
+            <a
+              href="/"
+              class="text-black opacity-60 hover:opacity-100 transition-all flex items-center gap-2 py-0 px-0 md:py-6 md:px-3 md:hover:bg-gray-100 flex-col md:flex-row"
+            >
+              <img src="img/icon/task.svg" class="w-6" alt="" />
               Ishlar
             </a>
-            <a href="/" 
-            class="text-black opacity-60 hover:opacity-100
-            transition-all flex items-center gap-2
-            py-0 px-0
-            md:py-6
-            md:px-3
-            md:hover:bg-gray-100
-            flex-col md:flex-row">
-              <img src="img/icon/question-mark.png" class="w-6" alt="">
+            <a
+              href="/"
+              class="text-black opacity-60 hover:opacity-100 transition-all flex items-center gap-2 py-0 px-0 md:py-6 md:px-3 md:hover:bg-gray-100 flex-col md:flex-row"
+            >
+              <img src="img/icon/question-mark.png" class="w-6" alt="" />
               Yordam
             </a>
           </div>
@@ -103,84 +82,167 @@
             transition-all
             ">Sign Up</a> -->
             <div class="cursor-pointer relative">
-                <div class="flex gap-2" onclick="toggleDropdown('navbar-dropdown')">
-                    <img src="img/icon/user-image.png" alt="user-image" class="border border-gray-300 p-1 rounded-full">
-                    <img src="img/icon/arrow-down.svg" alt="arrow-down">
-                </div>
-                <div class="absolute w-60 border border-gray-100 bg-white mt-4 shadow-md top-full rounded-lg right-px py-3 px-4 hidden z-50" id="navbar-dropdown">
-                    <a href="#" class="flex gap-3 hover:bg-gray-100 py-2 px-3">
-                        <img src="img/icon/user.svg" class="w-6" alt=""> Mening Profilim
-                    </a>
-                    <hr>
-                    <a href="#" class="flex gap-3 hover:bg-gray-100 py-2 px-3">
-                        <img src="img/icon/task.svg" class="w-6" alt=""> Mening ishlarim
-                    </a>
-                    <hr>
-                    <a href="#" class="flex gap-3 hover:bg-gray-100 py-2 px-3">
-                        <img src="img/icon/plus.png" class="w-6" alt=""> Ish qo'shish
-                    </a>
-                    <hr>
-                    <a href="#" class="flex gap-3 hover:bg-gray-100 py-2 px-3 text-red-500">
-                        <img src="img/icon/logout.svg" class="w-6" alt=""> Hisobdan chiqish
-                    </a>
-                </div>
+              <div
+                class="flex gap-2"
+                onclick="toggleDropdown('navbar-dropdown')"
+              >
+                <img
+                  src="img/icon/user-image.png"
+                  alt="user-image"
+                  class="border border-gray-300 p-1 rounded-full"
+                />
+                <img src="img/icon/arrow-down.svg" alt="arrow-down" />
+              </div>
+              <div
+                class="absolute w-60 border border-gray-100 bg-white mt-4 shadow-md top-full rounded-lg right-px py-3 px-4 hidden z-50"
+                id="navbar-dropdown"
+              >
+                <a href="#" class="flex gap-3 hover:bg-gray-100 py-2 px-3">
+                  <img src="img/icon/user.svg" class="w-6" alt="" /> Mening
+                  Profilim
+                </a>
+                <hr />
+                <a href="#" class="flex gap-3 hover:bg-gray-100 py-2 px-3">
+                  <img src="img/icon/task.svg" class="w-6" alt="" /> Mening
+                  ishlarim
+                </a>
+                <hr />
+                <a href="#" class="flex gap-3 hover:bg-gray-100 py-2 px-3">
+                  <img src="img/icon/plus.png" class="w-6" alt="" /> Ish
+                  qo'shish
+                </a>
+                <hr />
+                <a
+                  href="#"
+                  class="flex gap-3 hover:bg-gray-100 py-2 px-3 text-red-500"
+                >
+                  <img src="img/icon/logout.svg" class="w-6" alt="" /> Hisobdan
+                  chiqish
+                </a>
+              </div>
             </div>
-        </div>
+          </div>
         </div>
       </nav>
     </header>
     <main class="bg-gray-200 px-3 pt-24 pb-8 md:pt-6 md:pb-6">
       <div class="container mx-auto">
-        <div class="w-full flex items-center flex-col sm:justify-between sm:flex-row justify-center flex-wrap">
+        <div
+          class="w-full flex items-center flex-col sm:justify-between sm:flex-row justify-center flex-wrap"
+        >
           <h2 class="text-2xl font-medium">Ishlar ro'yhati</h2>
-          <a href="/" class="py-3
-          px-8 bg-gray-300
-          rounded-xl my-3
-          hover:shadow-[0_0_55px_0px_rgba(255,255,255,1)]
-          ">+ Ish qoshish</a>
+          <a
+            href="/"
+            class="py-3 px-8 bg-gray-300 rounded-xl my-3 hover:shadow-[0_0_55px_0px_rgba(255,255,255,1)]"
+            >+ Ish qoshish</a
+          >
         </div>
 
-        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
+        <div
+          class="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8"
+        >
           <!-- detail -->
-          <div class="card w-full h-auto bg-white rounded-xl p-4 pb-1 relative my-3">
-            <div class="profile-view flex items-center gap-5">
-              <div class="user-image">
-                <img src="img/profile-img.png" alt="">
+          <div
+            class="card w-full h-auto bg-white rounded-xl pb-0 relative my-3"
+          >
+            <div class="p-4 pb-0">
+              <div class="profile-view flex items-center gap-5">
+                <div class="user-image">
+                  <img src="img/profile-img.png" alt="" />
+                </div>
+                <div class="username">
+                  <a href="#" class="text-md font-medium hover:underline"
+                    >S1mple</a
+                  >
+                  <br />
+                  <p class="text-sm">Developer</p>
+                </div>
+                <div class="cursor-pointer absolute top-5 right-4">
+                  <img onclick="toggleDropdown('work')" src="img/icon/more-vertical.svg" class="w-7" alt="" />
+                  <div class="absolute flex items-center gap-2 top-[120%] right-2 bg-white py-2 px-5 rounded-md shadow-[0_5px_20px_-5px_rgba(0,0,0,0.7)] font-medium text-1xl hidden" id="work">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 48.065 48.065" style="enable-background:new 0 0 48.065 48.065;" xml:space="preserve">
+                      <path d="M40.908,0H7.158c-0.553,0-1,0.448-1,1v46.065c0,0.401,0.239,0.763,0.608,0.92c0.369,0.157,0.797,0.078,1.085-0.2  l16.182-15.582l16.182,15.582c0.189,0.183,0.439,0.28,0.693,0.28c0.132,0,0.266-0.026,0.392-0.08c0.369-0.157,0.608-0.52,0.608-0.92  V1C41.908,0.448,41.46,0,40.908,0z M39.908,44.714L24.726,30.095c-0.193-0.187-0.443-0.28-0.693-0.28s-0.5,0.093-0.693,0.28  L8.158,44.714V2h31.75V44.714z"/>
+                      </svg>
+                    Saqlash
+                  </div>
+                </div>
               </div>
-              <div class="username">
-                <a href="#" class="text-md font-medium hover:underline">S1imple</a>
-                <br>
-                <p class="text-sm">Developer</p>
+              <div class="post-image my-3">
+                <a href="/">
+                  <img src="img/icon/post.png" class="w-full" alt="" />
+                </a>
               </div>
-              <div class="more cursor-pointer absolute top-4 right-3">
-                <img src="img/icon/more-vertical.svg" class="w-7" alt="">
-              </div>
+              <!-- <div class="post-detail">
+                <a href="#" class="
+                w-full rounded-xl
+                block text-center
+                my-3 font-medium py-3
+                border-2 border-blue-500
+                hover:bg-blue-500
+                transition-all
+                duration-200
+                hover:text-white
+                ">Ko'proq ko'rish</a>
+              </div> -->
             </div>
-            <div class="post-image my-3">
-              <img src="img/icon/post.png" class="w-full" alt="">
-            </div>
-            <div class="my-5 flex justify-around items-center">
-              <div class="cursor-pointer bg-blue-500 p-2 rounded">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" class="bi bi-chevron-up" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/> </svg>
+            <hr />
+            <hr />
+            <div class="pt-2 pb-2 px-2">
+              <div class="flex items-center justify-between">
+                <div class="cursor-pointer flex items-center">
+                  <svg
+                    width="35px"
+                    height="35px"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.6569 11.2929L16.2427 12.7071L12 8.46444L7.75735 12.7071L6.34314 11.2929L12 5.63605L17.6569 11.2929Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M17.6569 16.9497L16.2427 18.3639L12 14.1213L7.75735 18.364L6.34314 16.9498L12 11.2929L17.6569 16.9497Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="font-bold">24</span>
+                </div>
+                <div class="cursor-pointer flex items-center gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    id="Capa_1"
+                    x="0px"
+                    y="0px"
+                    width="35px"
+                    height="35px"
+                    viewBox="0 0 442.04 442.04"
+                    style="enable-background: new 0 0 442.04 442.04"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <g>
+                        <path
+                          d="M221.02,341.304c-49.708,0-103.206-19.44-154.71-56.22C27.808,257.59,4.044,230.351,3.051,229.203    c-4.068-4.697-4.068-11.669,0-16.367c0.993-1.146,24.756-28.387,63.259-55.881c51.505-36.777,105.003-56.219,154.71-56.219    c49.708,0,103.207,19.441,154.71,56.219c38.502,27.494,62.266,54.734,63.259,55.881c4.068,4.697,4.068,11.669,0,16.367    c-0.993,1.146-24.756,28.387-63.259,55.881C324.227,321.863,270.729,341.304,221.02,341.304z M29.638,221.021    c9.61,9.799,27.747,27.03,51.694,44.071c32.83,23.361,83.714,51.212,139.688,51.212s106.859-27.851,139.688-51.212    c23.944-17.038,42.082-34.271,51.694-44.071c-9.609-9.799-27.747-27.03-51.694-44.071    c-32.829-23.362-83.714-51.212-139.688-51.212s-106.858,27.85-139.688,51.212C57.388,193.988,39.25,211.219,29.638,221.021z"
+                        />
+                      </g>
+                      <g>
+                        <path
+                          d="M221.02,298.521c-42.734,0-77.5-34.767-77.5-77.5c0-42.733,34.766-77.5,77.5-77.5c18.794,0,36.924,6.814,51.048,19.188    c5.193,4.549,5.715,12.446,1.166,17.639c-4.549,5.193-12.447,5.714-17.639,1.166c-9.564-8.379-21.844-12.993-34.576-12.993    c-28.949,0-52.5,23.552-52.5,52.5s23.551,52.5,52.5,52.5c28.95,0,52.5-23.552,52.5-52.5c0-6.903,5.597-12.5,12.5-12.5    s12.5,5.597,12.5,12.5C298.521,263.754,263.754,298.521,221.02,298.521z"
+                        />
+                      </g>
+                      <g>
+                        <path
+                          d="M221.02,246.021c-13.785,0-25-11.215-25-25s11.215-25,25-25c13.786,0,25,11.215,25,25S234.806,246.021,221.02,246.021z"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                  <span class="font-bold">250</span>
+                </div>
               </div>
-              <div>
-                <h4 class="text-lg font-bold text-center">24</h4>
-              </div>
-              <div class="cursor-pointer bg-red-500 p-2 rounded">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" class="bi bi-chevron-down" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/> </svg>
-              </div>
-            </div>
-            <div class="post-detail">
-              <a href="#" class="
-              w-full rounded-xl
-              block text-center
-              my-3 font-medium py-3
-              border-2 border-blue-500
-              hover:bg-blue-500
-              transition-all
-              duration-200
-              hover:text-white
-              ">Ko'proq ko'rish</a>
             </div>
           </div>
           <!-- end detail -->
@@ -188,26 +250,36 @@
       </div>
     </main>
 
-    <footer class="pb-24 md:pb-3 bg-white py-3 px-3 shadow-[0_-10px_15px_-15px_rgba(0,0,0,0.5)]">
-      <div class="container mx-auto flex flex-col md:flex-row items-center justify- text-center">
+    <footer
+      class="pb-24 md:pb-3 bg-white py-3 px-3 shadow-[0_-10px_15px_-15px_rgba(0,0,0,0.5)]"
+    >
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center justify-between text-center"
+      >
         <div class="social-account flex items-center gap-5 my-3">
           <a href="#">
-            <img src="img/icon/instagram.png" class="w-8" alt="">
+            <img src="img/icon/instagram.png" class="w-8" alt="" />
           </a>
           <a href="#">
-            <img src="img/icon/telegram.png" class="w-8" alt="">
+            <img src="img/icon/telegram.png" class="w-8" alt="" />
           </a>
           <a href="#">
-            <img src="img/icon/youtube.png" class="w-8" alt="">
+            <img src="img/icon/youtube.png" class="w-8" alt="" />
           </a>
         </div>
-        <p class="font-medium my-3">© 2020 - Barcha xuquqlar litsenziyalangan</p>
+        <p class="font-medium my-3">
+          © 2020 - Barcha xuquqlar litsenziyalangan
+        </p>
         <p class="font-medium my-3">Robocode o'quvchilari uchun</p>
       </div>
     </footer>
 
-    <a href="#" class="fixed z-50 right-0 bottom-24 bg-white p-3 rounded-full shadow-[0_5px_15px_0_rgba(0,0,0,0.5)] translate-x-full" id="toTop">
-      <img src="img/icon/arrowhead-up.svg" alt="">
+    <a
+      href="#"
+      class="fixed z-50 right-0 bottom-24 bg-white p-3 rounded-full shadow-[0_5px_15px_0_rgba(0,0,0,0.5)] translate-x-full"
+      id="toTop"
+    >
+      <img src="img/icon/arrowhead-up.svg" alt="" />
     </a>
 
     <script src="js/tailwind.js"></script>
