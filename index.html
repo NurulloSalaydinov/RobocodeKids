@@ -8,7 +8,7 @@
     <meta name="description"
         content="Robocode Kids - Robocode oquvchilari, O'quvchilar uchun portfolio, Ishlar to'plami" />
     <meta content="Nurullo Salaydinov" name="author" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <title>Bosh sahifa | Robocode Kids</title>
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
     <style>
@@ -47,6 +47,7 @@
             width: 6px;
             height: 6px;
             border-radius: 50%;
+            transition: all 0.4s;
         }
     </style>
 </head>
@@ -127,16 +128,16 @@
     <main class="bg-[#E0E0EC] px-3 pt-24 pb-8 md:pt-6 md:pb-6">
         <div class="container mx-auto">
             <div class="flex items-center flex-col md:flex-row justify-between p-5 h-auto bg-white rounded-[15px]">
-                <div class="swiper home-swiper h-[250px] md:h-[300px] w-full sm:w-[75%] md:w-[55%]">
+                <div class="swiper home-swiper h-[250px] md:h-[300px] w-full sm:w-[75%] md:w-[95%]">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="img/home-card.png" class="w-full h-[250px] md:h-[300px] rounded-[15px]" alt="">
+                            <img src="img/home-card.png" class="w-full h-[260px] md:h-[300px] rounded-[15px]" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="img/home-card.png" class="w-full h-[250px] md:h-[300px] rounded-[15px]" alt="">
+                            <img src="img/home-card.png" class="w-full h-[260px] md:h-[300px] rounded-[15px]" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="img/home-card.png" class="w-full h-[250px] md:h-[300px] rounded-[15px]" alt="">
+                            <img src="img/home-card.png" class="w-full h-[260px] md:h-[300px] rounded-[15px]" alt="">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -148,6 +149,44 @@
                     <p>Aug 14, 2020</p>
                 </div>
             </div>
+            <div class="text-2xl font-medium text-center md:text-left mt-7 mb-3">
+                <h1>Eng yaxshi ishlar</h1>
+            </div>
+            <!-- top works images -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-5">
+                <div class="shadow-md">
+                    <a href="#!" target="__blank">
+                        <img src="img/top-work/work-1.png" class="w-full h-full transition-all duration-300 hover:scale-[1.05]" alt="">
+                    </a>
+                </div>
+                <div class="shadow-md">
+                    <a href="#!" target="__blank">
+                        <img src="img/top-work/work-2.png" class="w-full h-full transition-all duration-300 hover:scale-[1.05]" alt="">
+                    </a>
+                </div>
+                <div class="shadow-md">
+                    <a href="#!" target="__blank">
+                        <img src="img/top-work/work-3.png" class="w-full h-full transition-all duration-300 hover:scale-[1.05]" alt="">
+                    </a>
+                </div>
+                <div class="shadow-md">
+                    <a href="#!" target="__blank">
+                        <img src="img/top-work/work-4.png" class="w-full h-full transition-all duration-300 hover:scale-[1.05]" alt="">
+                    </a>
+                </div>
+                <div class="shadow-md">
+                    <a href="#!" target="__blank">
+                        <img src="img/top-work/work-5.png" class="w-full h-full transition-all duration-300 hover:scale-[1.05]" alt="">
+                    </a>
+                </div>
+                <div class="shadow-md">
+                    <a href="#!" target="__blank">
+                        <img src="img/top-work/work-6.png" class="w-full h-full transition-all duration-300 hover:scale-[1.05]" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- end top works images -->
+
         </div>
     </main>
 
@@ -178,9 +217,10 @@
     </a>
 
     <script src="js/tailwind.js"></script>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".home-swiper", {
+            loop: true,
             autoplay: {
                 delay: 3000,
             },
