@@ -11,45 +11,7 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <title>Bosh sahifa | Robocode Kids</title>
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
-
-        * {
-            font-family: 'Baloo 2', cursive !important;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body::-webkit-scrollbar {
-            width: 1rem;
-        }
-
-        body::-webkit-scrollbar-track {
-            background: #1750ff;
-        }
-
-        body::-webkit-scrollbar-thumb {
-            border-radius: 20px;
-            background-color: #e5e7eb;
-            border: 5px solid #1750ff;
-        }
-
-        span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-            opacity: 1;
-            width: 30px;
-            height: 6px;
-            border-radius: 10px;
-            background-color: blue;
-        }
-        .swiper-pagination-bullet {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            transition: all 0.4s;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -125,6 +87,14 @@
             </div>
         </nav>
     </header>
+    <div id="preLoader" class="fixed top-0 left-0
+    w-full h-screen bg-black z-50
+    flex items-center justify-center gap-3
+    ">
+        <div class="border-[15px] border-t-blue-500 border-b-blue-500 bg-white rounded-full w-24 h-24 animate-spin"></div>
+        <div class="border-[15px] border-t-blue-500 border-b-blue-500 bg-white rounded-full w-24 h-24 animate-spin"></div>
+        <div class="border-[15px] border-t-blue-500 border-b-blue-500 bg-white rounded-full w-24 h-24 animate-spin"></div>
+    </div>
     <main class="bg-[#E0E0EC] px-3 pt-24 pb-8 md:pt-6 md:pb-6">
         <div class="container mx-auto">
             <div class="flex items-center flex-col md:flex-row justify-between p-5 h-auto bg-white rounded-[15px]">
@@ -149,7 +119,7 @@
                     <p>Aug 14, 2020</p>
                 </div>
             </div>
-            <div class="text-3xl font-medium text-center md:text-left my-7">
+            <div class="text-4xl font-semibold text-center md:text-left my-7">
                 <h1>Eng yaxshi ishlar</h1>
             </div>
             <!-- top works images -->
@@ -186,7 +156,7 @@
                 </div>
             </div>
             <!-- end top works images -->
-            <div class="text-3xl font-medium text-center md:text-left my-7">
+            <div class="text-4xl font-semibold text-center md:text-left my-7">
                 <h1>"The best student"</h1>
             </div>
             <!-- top students -->
@@ -259,7 +229,7 @@
                 <!-- end student -->
             </div>
             <!-- end top students -->
-            <div class="text-3xl font-medium text-center md:text-left my-7">
+            <div class="text-4xl font-semibold text-center md:text-left my-7">
                 <h1>O'quvchilar reytingi</h1>
             </div>
             <!-- student rating -->
@@ -501,6 +471,34 @@
                 <h1 class="text-xl mr-3 font-medium">10th</h1>
             </div>
             <!-- end student rating -->
+            <div class="text-4xl font-semibold text-center md:text-left my-10">
+                <h1>Aloqa</h1>
+            </div>
+            <div id="contact" class="grid grid-cols-1 md:grid-cols-2 overflow-hidden">
+                <div id="rotate-img" class="rotate-[-40deg] translate-x-[0] md:translate-x-[-90px] transition-all duration-500">
+                    <img src="img/contact.png" class="w-full" alt="">
+                </div>
+                <form class="w-full p-5 pt-10 md:pt-10 lg:pt-32">
+                    <!-- input -->
+                    <input type="text"
+                    class="w-full rounded-lg h-14 block outline-0 pl-5 mb-5"
+                    placeholder="Ism Familya*"
+                    required name="name"
+                    >
+                    <!-- input -->
+                    <input type="text"
+                    pattern="[0-9]{2}[0-9]{3}[0-9]{4}"
+                    class="w-full rounded-lg h-14 block outline-0 pl-5 mb-5"
+                    placeholder="Telefon raqam*"
+                    required name="phone"
+                    >
+                    <!-- input -->
+                    <!-- textarea -->
+                    <textarea class="w-full h-40 max-h-[300px] min-h-[100px] rounded-lg h-14 block outline-0 pt-5 pl-5 mb-5" placeholder="Habar*" name="message" required></textarea>
+                    <!-- textarea -->
+                    <button class="bg-[#FDC904] py-3 w-full rounded-lg text-white text-xl my-2 border">Yuborish</button>
+                </form>
+            </div>
         </div>
     </main>
 
@@ -525,12 +523,11 @@
     </footer>
 
     <a href="#"
-        class="fixed z-50 right-0 bottom-24 bg-white p-2 rounded-full shadow-[0_5px_15px_0_rgba(0,0,0,0.5)] translate-x-full"
+        class="fixed z-40 right-0 bottom-24 bg-white p-2 rounded-full shadow-[0_5px_15px_0_rgba(0,0,0,0.5)] translate-x-full"
         id="toTop">
         <img src="img/icon/arrowhead-up.svg" width="30px" alt="" />
     </a>
 
-    <script src="js/tailwind.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".home-swiper", {

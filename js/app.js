@@ -1,3 +1,9 @@
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    document.getElementById('preLoader').classList.add('hidden')
+  }, 500)
+});
+
 const toggleDropdown = (drId) => {
   var dropdown = document.getElementById(drId);
   dropdown.classList.toggle("hidden");
@@ -33,6 +39,22 @@ const NavbarAnimation = () => {
 };
 
 NavbarAnimation();
+
+const animateOnScroll = (elemId, className='') => {
+  var elem = document.getElementById(elemId);
+  window.addEventListener('scroll', () => {
+    let elem_height = elem.getBoundingClientRect().height;
+    let elem_top = Math.ceil(elem.getBoundingClientRect().top)
+    if(elem_top <= window.innerHeight - ( elem_height / 2)){
+      elem.classList.remove(className)
+    }
+    else{
+      elem.classList.add(className)
+    }
+  })
+}
+
+animateOnScroll('rotate-img','rotate-[-40deg]')
 
 
 
