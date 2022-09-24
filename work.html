@@ -11,6 +11,7 @@
     <meta content="Nurullo Salaydinov" name="author" />
     <title>Ishlar ro'yhati | Robocode Kids</title>
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/task.css">
   </head>
   <body>
@@ -106,6 +107,14 @@
         </div>
       </nav>
     </header>
+    <div id="preLoader" class="fixed top-0 left-0
+    w-full h-screen bg-black z-50
+    flex items-center justify-center gap-3
+    ">
+        <div class="border-[15px] border-t-blue-500 border-b-blue-500 bg-white rounded-full w-24 h-24 animate-spin"></div>
+        <div class="border-[15px] border-t-blue-500 border-b-blue-500 bg-white rounded-full w-24 h-24 animate-spin"></div>
+        <div class="border-[15px] border-t-blue-500 border-b-blue-500 bg-white rounded-full w-24 h-24 animate-spin"></div>
+    </div>
     <main class="bg-[#E0E0EC] px-3 pt-24 pb-8 md:pt-6 md:pb-6">
       <div class="container mx-auto">
         <div
@@ -823,7 +832,6 @@
       <img src="img/icon/arrowhead-up.svg" width="30px" alt="" />
     </a>
 
-    <script src="js/tailwind.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

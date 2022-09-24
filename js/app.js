@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
+  // setTimeout(() => {
     document.getElementById('preLoader').classList.add('hidden')
-  }, 500)
+  // }, 1000)
 });
 
 const toggleDropdown = (drId) => {
@@ -42,21 +42,38 @@ NavbarAnimation();
 
 const animateOnScroll = (elemId, className='') => {
   var elem = document.getElementById(elemId);
-  window.addEventListener('scroll', () => {
-    let elem_height = elem.getBoundingClientRect().height;
-    let elem_top = Math.ceil(elem.getBoundingClientRect().top)
-    if(elem_top <= window.innerHeight - ( elem_height / 2)){
-      elem.classList.remove(className)
-    }
-    else{
-      elem.classList.add(className)
-    }
-  })
+  if (elem) {
+    window.addEventListener('scroll', () => {
+      let elem_height = elem.getBoundingClientRect().height;
+      let elem_top = Math.ceil(elem.getBoundingClientRect().top)
+      if(elem_top <= window.innerHeight - ( elem_height / 2)){
+        elem.classList.remove(className)
+      }
+      else{
+        elem.classList.add(className)
+      }
+    })
+  }
 }
 
 animateOnScroll('rotate-img','rotate-[-40deg]')
 
+var openFile = function(event) {
+  var input = event.target;
 
+  var reader = new FileReader();
+  reader.onload = function(){
+    var dataURL = reader.result;
+    var output = document.getElementById('insertPic');
+    output.src = dataURL;
+    // var width = output.naturalWidth;
+    // var height = output.naturalHeight;
+    // console.log(width)
+    // console.log(height)
+  };
+  reader.readAsDataURL(input.files[0]);
+  console.log(reader)
+}
 
 {/* <div class="my-5 flex justify-around items-center">
               <div class="cursor-pointer bg-blue-500 p-2 rounded">
