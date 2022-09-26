@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'img/favicon.svg' %}" type="image/x-icon" />
+    <title>Ro'yxatdan o'tish | Robocodekids</title>
+</head>
+ 
+<body class="bg-[#E0E0EC]">
+
+    <!-- Form -->
+    <div class="container mx-auto px-3 md:px-8 mt-20 mb-20 md:mt-15">
+        <form class="lg:w-1/2 md:w-1/1 bg-white shadow-lg rounded px-3 md:px-8 p-3 pb-8 mx-auto" method="POST" action="">
+            {% csrf_token %}
+            <div class="flex justify-center">
+                <a href="/" class="navbar-brand">
+                    <img src="{% static 'img/robocode-logo-png.png' %}" class="w-60" alt="" />
+                </a>
+            </div>
+            <div class="div md:flex">
+                <div class="md:my-4 my-3 md:w-full md:mr-3">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="ism">
+                        Ism
+                    </label>
+                    {{form.username}}
+                </div>
+                <div class="md:my-4 my-3 md:w-full md:ml-3">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                        E-mail
+                    </label>
+                    {{form.email}}
+                </div>
+            </div>
+            <div class="mb-4 mt-3 md:mt-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="parol">
+                    Parol
+                </label>
+                {{form.password1}}
+            </div>
+            <div class="mb-4 mt-3 md:mt-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="re-parol">
+                    Re-Parol
+                </label>
+                {{form.password2}}
+
+            </div>
+            {{ form.errors }}
+            <a href="{% url 'main:login' %}"><p class="text-right text-blue-500">Ro'yxatdan o'tganmisiz ?</p></a>
+            <div class="flex items-center justify-between">
+                <button
+                    class="bg-[#FDC904] w-full text-white font-bold py-3 px-4 mt-8 rounded focus:outline-none focus:shadow-outline">
+                    Ro'yxatdan o'tish
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="{% static 'js/tailwind.js' %}"></script>
+
+    <script>
+        let input = document.getElementsByTagName('input')
+        for (let i = 0; i < input.length; i++){
+            input[i].classList.add("shadow", "appearance-none", "border", "rounded", "w-full", "py-2", "px-3", "text-gray-700", "mb-3", "leading-tight", "focus:outline-none", "focus:shadow-outline");
+        }
+    </script>
+
+</body>
+
+</html>

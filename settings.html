@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description"
+            content="Robocode Kids - Robocode oquvchilari, O'quvchilar uchun portfolio, Ishlar to'plami" />
+        <meta content="Nurullo Salaydinov" name="author" />
+        <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
+        <link rel="stylesheet" href="css/base.css">
+        <title>Sozlamalar | Robocode Kids</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="bg-white shadow-md z-50 transition-all duration-700 w-full fixed top-0 left-0 md:relative">
+                <div class="container mx-auto px-3 flex items-center justify-between">
+                    <a href="/" class="navbar-brand">
+                        <img src="img/robocode-logo-png.png" class="w-40" alt="" />
+                    </a>
+                    <div
+                        class="navbar-links text-lg font-medium flex items-center justify-around w-full py-2 bg-white md:py-0 shadow-[0_-20px_15px_-20px_rgba(0,0,0,0.5)] fixed bottom-0 left-0 md:relative md:w-auto">
+                        <a href="/"
+                            class="text-black transition-all flex items-center flex-col md:flex-row gap-2 py-0 px-0 md:py-6 md:px-3 md:hover:bg-gray-100">
+                            <img src="img/icon/home.svg" class="w-6" alt="" />
+                            Bosh sahifa
+                        </a>
+                        <a href="/work.html"
+                            class="text-black opacity-60 hover:opacity-100 transition-all flex items-center gap-2 py-0 px-0 md:py-6 md:px-3 md:hover:bg-gray-100 flex-col md:flex-row">
+                            <img src="img/icon/task.svg" class="w-6" alt="" />
+                            Ishlar
+                        </a>
+                        <a href="/"
+                            class="text-black opacity-60 hover:opacity-100 transition-all flex items-center gap-2 py-0 px-0 md:py-6 md:px-3 md:hover:bg-gray-100 flex-col md:flex-row">
+                            <img src="img/icon/question-mark.png" class="w-6" alt="" />
+                            Yordam
+                        </a>
+                    </div>
+                    <div class="flex gap-3">
+                        <!-- <a href="#" 
+            class="block bg-blue-500 py-2 px-6
+            text-white rounded border border-blue-500
+            hover:bg-transparent
+            hover:text-blue-500
+            transition-all
+            ">Kirish</a>
+            <a href="#" 
+            class="block bg-transparent py-2 px-6
+            text-yellow-500 rounded border border-yellow-500
+            hover:bg-yellow-500
+            hover:text-white
+            transition-all
+            ">Ro'yxatdan o'tish</a> -->
+                        <div class="cursor-pointer relative">
+                            <div class="flex gap-2" onclick="toggleDropdown('navbar-dropdown')">
+                                <img src="img/icon/user-image.png" alt="user-image"
+                                    class="border border-gray-300 p-1 rounded-full" />
+                                <img src="img/icon/arrow-down.svg" alt="arrow-down" />
+                            </div>
+                            <div class="absolute w-60 border border-gray-100 bg-white mt-4 shadow-md top-full rounded-lg right-px py-3 px-4 hidden z-50"
+                                id="navbar-dropdown">
+                                <a href="#" class="flex gap-3 hover:bg-gray-100 py-2 px-3">
+                                    <img src="img/icon/user.svg" class="w-6" alt="" /> Mening
+                                    Profilim
+                                </a>
+                                <hr />
+                                <a href="#" class="flex gap-3 hover:bg-gray-100 py-2 px-3">
+                                    <img src="img/icon/task.svg" class="w-6" alt="" /> Mening
+                                    ishlarim
+                                </a>
+                                <hr />
+                                <a href="#" class="flex gap-3 hover:bg-gray-100 py-2 px-3">
+                                    <img src="img/icon/plus.png" class="w-6" alt="" /> Ish
+                                    qo'shish
+                                </a>
+                                <hr />
+                                <a href="#" class="flex gap-3 hover:bg-gray-100 py-2 px-3 text-red-500">
+                                    <img src="img/icon/logout.svg" class="w-6" alt="" /> Hisobdan
+                                    chiqish
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div id="preLoader" class="fixed top-0 left-0
+    w-full h-screen bg-black z-50
+    flex items-center justify-center gap-3
+    ">
+            <div class="border-[15px] border-t-blue-500 border-b-blue-500 bg-white rounded-full w-24 h-24 animate-spin">
+            </div>
+            <div class="border-[15px] border-t-blue-500 border-b-blue-500 bg-white rounded-full w-24 h-24 animate-spin">
+            </div>
+            <div class="border-[15px] border-t-blue-500 border-b-blue-500 bg-white rounded-full w-24 h-24 animate-spin">
+            </div>
+        </div>
+
+        <main class="bg-[#E0E0EC] pt-24 pb-24 md:pt-16 px-3">
+            <div class="container mx-auto">
+                <h1 class="text-2xl">Sozlamalar</h1>
+                <div class="flex items-start justify-between gap-5 flex-wrap md:flex-nowrap my-8">
+                    <div class="w-full md:w-[30%]">
+                        <div class="bg-white rounded-lg flex items-center justify-center overflow-hidden h-[300px]">
+                            <label for="avatar">
+                                <img src="img/Avatar-large.png" class="w-full h-[300px] object-scale-down" alt="avatar"
+                                    id="insertAvatar">
+                                <input type="file" class="hidden" onchange="openFile(event, 'insertAvatar')"
+                                    accept="image/*" id="avatar">
+                            </label>
+                        </div>
+                        <input class="font-bold text-2xl mt-5 capitalize rounded w-full py-2 px-4" value="developer"
+                            maxlength="50" required name="username" />
+                        <input class="font-medium text-2xl mt-2 capitalize rounded w-full py-2 px-4" required
+                            maxlength="100" name="full_name" value="Nurullo Salaydinov" />
+                        <textarea maxlength="200"
+                            class="w-full h-32 py-2 px-4 rounded text-xl mt-2">Full Stack Developer Who Never Stops Creating Unique Programms :)</textarea>
+                        <h2 class="text-2xl mt-6">Ijtimoiy tarmoqlar</h2>
+                        <div class="flex items-center bg-white w-full gap-3 py-2 px-5 rounded my-3">
+                            <img src="img/icon/telegram.svg" alt="">
+                            <input type="url" class="w-full py-1 outline-none border-b-[1px] border-black"
+                                maxlength="150" name="telegram" value="https://www.instagram.com/pythondevuz"
+                                placeholder="Telegram">
+                        </div>
+                        <div class="flex items-center bg-white w-full gap-3 py-2 px-5 rounded my-3">
+                            <img src="img/icon/instagram.svg" alt="">
+                            <input type="url" class="w-full py-1 outline-none border-b-[1px] border-black"
+                                maxlength="150" name="instagram" value="https://www.instagram.com/pythondevuz"
+                                placeholder="Instagram">
+                        </div>
+                        <div class="flex items-center bg-white w-full gap-3 py-2 px-5 rounded my-3">
+                            <img src="img/icon/globe.svg" alt="">
+                            <input type="url" class="w-full py-1 outline-none border-b-[1px] border-black"
+                                maxlength="150" name="website" value="https://www.instagram.com/pythondevuz"
+                                placeholder="Website">
+                        </div>
+                    </div>
+                    <div class="w-full md:w-[60%]">
+                        <!-- // -->
+                        <div class="w-full p-3 bg-white rounded-lg flex items-center justify-between flex-wrap mb-3">
+                            <div class="w-full lg:w-[40%]">
+                                <img src="img/icon/post.png" class="w-full" alt="">
+                            </div>
+                            <div class="block w-full lg:w-[60%] p-3 pb-0">
+                                <a href="#" class="text-lg font-medium hover:text-blue-500">Renderer App</a>
+                                <p>O'z saytingizni 2.6 minutda chiroylik qiling !</p>
+                                <div class="my-1 flex items-center gap-3">
+                                    <div class="flex items-center gap-1">
+                                        <img src="img/icon/heart.png" class="w-6" alt=""> 20
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <img src="img/icon/eye.png" class="w-6" alt=""> 20
+                                    </div>
+                                </div>
+                                <hr class="mt-4 mb-3">
+                                <div class="flex gap-3">
+                                    <a href="#" class="flex text-white gap-2 py-2 px-3 bg-blue-500 rounded">
+                                        Tahrirlamoq
+                                        <svg width="25" height="23" viewBox="0 0 25 23" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M17.474 3.60677L21.3889 7.5217C21.5538 7.68663 21.5538 7.95573 21.3889 8.12066L11.9097 17.5998L7.88194 18.0469C7.34375 18.1076 6.88802 17.6519 6.94878 17.1137L7.39583 13.0859L16.875 3.60677C17.0399 3.44184 17.309 3.44184 17.474 3.60677ZM24.5052 2.61285L22.3872 0.494792C21.7274 -0.164931 20.6554 -0.164931 19.9913 0.494792L18.4549 2.03125C18.2899 2.19618 18.2899 2.46528 18.4549 2.63021L22.3698 6.54514C22.5347 6.71007 22.8038 6.71007 22.9687 6.54514L24.5052 5.00868C25.1649 4.34462 25.1649 3.27257 24.5052 2.61285V2.61285ZM16.6667 15.0217V19.4401H2.77778V5.55122H12.7517C12.8906 5.55122 13.0208 5.49479 13.1207 5.39931L14.8568 3.66319C15.1866 3.33333 14.9523 2.77344 14.4878 2.77344H2.08333C0.93316 2.77344 0 3.7066 0 4.85677V20.1345C0 21.2847 0.93316 22.2179 2.08333 22.2179H17.3611C18.5113 22.2179 19.4444 21.2847 19.4444 20.1345V13.2856C19.4444 12.8212 18.8845 12.5911 18.5547 12.9167L16.8186 14.6528C16.7231 14.7526 16.6667 14.8828 16.6667 15.0217Z"
+                                                fill="white" />
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="flex text-white gap-2 py-2 px-3 bg-red-500 rounded">
+                                        O'chirmoq
+                                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M21.0938 1.56251H15.2344L14.7754 0.649423C14.6782 0.454215 14.5284 0.29001 14.3429 0.175281C14.1575 0.0605526 13.9437 -0.00014785 13.7256 8.5609e-06H8.14453C7.92694 -0.000827891 7.71352 0.0596463 7.52871 0.174503C7.34391 0.289359 7.19519 0.453951 7.09961 0.649423L6.64062 1.56251H0.78125C0.57405 1.56251 0.375336 1.64482 0.228823 1.79133C0.0823101 1.93784 0 2.13656 0 2.34376L0 3.90626C0 4.11346 0.0823101 4.31217 0.228823 4.45869C0.375336 4.6052 0.57405 4.68751 0.78125 4.68751H21.0938C21.301 4.68751 21.4997 4.6052 21.6462 4.45869C21.7927 4.31217 21.875 4.11346 21.875 3.90626V2.34376C21.875 2.13656 21.7927 1.93784 21.6462 1.79133C21.4997 1.64482 21.301 1.56251 21.0938 1.56251V1.56251ZM2.59766 22.8027C2.63492 23.3978 2.89754 23.9562 3.33206 24.3644C3.76658 24.7727 4.34033 24.9999 4.93652 25H16.9385C17.5347 24.9999 18.1084 24.7727 18.5429 24.3644C18.9775 23.9562 19.2401 23.3978 19.2773 22.8027L20.3125 6.25001H1.5625L2.59766 22.8027Z"
+                                                fill="white" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+        <footer class="pb-24 lg:pb-3 bg-white py-3 px-3 shadow-[0_-10px_15px_-15px_rgba(0,0,0,0.5)]">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between text-center">
+                <div class="social-account flex items-center gap-5 my-3">
+                    <a href="#">
+                        <img src="img/icon/instagram.png" class="w-8" alt="" />
+                    </a>
+                    <a href="#">
+                        <img src="img/icon/telegram.png" class="w-8" alt="" />
+                    </a>
+                    <a href="#">
+                        <img src="img/icon/youtube.png" class="w-8" alt="" />
+                    </a>
+                </div>
+                <p class="font-medium my-3">
+                    © 2022 - Barcha xuquqlar litsenziyalangan
+                </p>
+                <p class="font-medium my-3">Robocode o'quvchilari uchun</p>
+            </div>
+        </footer>
+
+        <a href="#"
+            class="fixed z-40 right-0 bottom-24 bg-white p-2 rounded-full shadow-[0_5px_15px_0_rgba(0,0,0,0.5)] translate-x-full"
+            id="toTop">
+            <img src="img/icon/arrowhead-up.svg" width="30px" alt="" />
+        </a>
+
+        <script src="js/tailwind.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'img/favicon.svg' %}" type="image/x-icon" />
+    <title>Kirish | Robocodekids</title>
+</head>
+
+<body class="bg-[#E0E0EC]">
+
+    <!-- Form -->
+    <div class="container mx-auto px-3 md:px-8 mt-20 mb-20 md:mt-15">
+        <form class="lg:w-1/2 md:w-1/1 bg-white shadow-lg rounded px-3 md:px-8 p-3 pb-8 mx-auto" method="POST" action="">
+            {% csrf_token %}
+            <div class="flex justify-center">
+                <a href="/" class="navbar-brand">
+                    <img src="{% static 'img/robocode-logo-png.png' %}" class="w-60" alt="" />
+                </a>
+            </div>
+            <div class="md:my-4 my-8">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                    Username
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                    id="username" type="text" name="username" placeholder="Username">
+            </div>
+            <div class="mb-6 mt-8 md:mt-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="parol">
+                    Parol
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="parol" type="password" name="password" placeholder="Parol">
+            </div>
+            
+            {% for message in messages %}
+                <p id="messages">{{message}}</p>
+            {% endfor %}
+                
+            <a href="{% url 'main:register' %}"><p class="text-right text-blue-500">Ro'yxatdan o'tmaganmisiz ?</p></a>
+            <div class="flex items-center justify-between">
+                <button
+                    class="bg-[#FDC904] w-full text-white font-bold py-3 px-4 mt-10 rounded focus:outline-none focus:shadow-outline">
+                    Kirish
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="{% static 'js/tailwind.js' %}"></script>
+
+</body>
+
+</html>

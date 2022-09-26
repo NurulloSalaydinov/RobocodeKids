@@ -1,70 +1,88 @@
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () =>
+{
   // setTimeout(() => {
-    document.getElementById('preLoader').classList.add('hidden')
+  document.getElementById('preLoader').classList.add('hidden')
   // }, 1000)
 });
 
-const toggleDropdown = (drId) => {
+const toggleDropdown = (drId) =>
+{
   var dropdown = document.getElementById(drId);
   dropdown.classList.toggle("hidden");
 };
 
-window.onscroll = function() {
-	if (window.scrollY > 200) {
-		document.getElementById('toTop').classList.remove('translate-x-full');
-		document.getElementById('toTop').classList.add('right-5');
-	} else {
-		document.getElementById('toTop').classList.add('translate-x-full');
-		document.getElementById('toTop').classList.remove('right-5');
-	}
+window.onscroll = function ()
+{
+  if (window.scrollY > 200)
+  {
+    document.getElementById('toTop').classList.remove('translate-x-full');
+    document.getElementById('toTop').classList.add('right-5');
+  } else
+  {
+    document.getElementById('toTop').classList.add('translate-x-full');
+    document.getElementById('toTop').classList.remove('right-5');
+  }
 }
 
-const NavbarAnimation = () => {
+const NavbarAnimation = () =>
+{
   var nav = document.querySelector("nav");
   var prevScrollpos = window.pageYOffset;
-      window.addEventListener('scroll', function () {
-        var currentScrollPos = window.pageYOffset;
-        if (Math.ceil(window.scrollY) > 200 && window.innerWidth > 768) {
-          if (prevScrollpos > currentScrollPos) {
-            nav.style = "position: fixed !important;transform: translateY(0)";
-          } else {
-            nav.style =
-              "position: relative !important;transform: translateY(-100%)";
-          }
-          prevScrollpos = currentScrollPos;
-        } else {
-          nav.style = "";
-        }
-      });
+  window.addEventListener('scroll', function ()
+  {
+    var currentScrollPos = window.pageYOffset;
+    if (Math.ceil(window.scrollY) > 200 && window.innerWidth > 768)
+    {
+      if (prevScrollpos > currentScrollPos)
+      {
+        nav.style = "position: fixed !important;transform: translateY(0)";
+      } else
+      {
+        nav.style =
+          "position: relative !important;transform: translateY(-100%)";
+      }
+      prevScrollpos = currentScrollPos;
+    } else
+    {
+      nav.style = "";
+    }
+  });
 };
 
 NavbarAnimation();
 
-const animateOnScroll = (elemId, className='') => {
+const animateOnScroll = (elemId, className = '') =>
+{
   var elem = document.getElementById(elemId);
-  if (elem) {
-    window.addEventListener('scroll', () => {
+  if (elem)
+  {
+    window.addEventListener('scroll', () =>
+    {
       let elem_height = elem.getBoundingClientRect().height;
       let elem_top = Math.ceil(elem.getBoundingClientRect().top)
-      if(elem_top <= window.innerHeight - ( elem_height / 2)){
+      if (elem_top <= window.innerHeight - (elem_height / 2))
+      {
         elem.classList.remove(className)
       }
-      else{
+      else
+      {
         elem.classList.add(className)
       }
     })
   }
 }
 
-animateOnScroll('rotate-img','rotate-[-40deg]')
+animateOnScroll('rotate-img', 'rotate-[-40deg]')
 
-var openFile = function(event) {
+var openFile = function (event, whichElem)
+{
   var input = event.target;
 
   var reader = new FileReader();
-  reader.onload = function(){
+  reader.onload = function ()
+  {
     var dataURL = reader.result;
-    var output = document.getElementById('insertPic');
+    var output = document.getElementById(whichElem);
     output.src = dataURL;
     // var width = output.naturalWidth;
     // var height = output.naturalHeight;
